@@ -8,9 +8,9 @@ const Home = () => {
           <img alt="logo" />
         </div>
         <div className="home_description">
-          <h1>Star Align</h1>
+          <h1>star align</h1>
           <p>
-            A space for artists to post and share their work, completely free
+            A space for artists to post and share their work, completely free.
           </p>
         </div>
         <button className="home_enter">Enter</button>

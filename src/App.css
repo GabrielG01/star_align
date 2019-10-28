@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Jomolhari&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Modak|Quicksand&display=swap");
 
 .home_body {
   height: 100%;
@@ -30,5 +30,12 @@
 }
 
 .home_description p {
-  font-family: "Jomolhari", serif;
+  margin-bottom: 90px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.home_description h1 {
+  font-size: 90px;
+  font-weight: 100;
+  font-family: "Modak", cursive;
 }
