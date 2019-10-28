@@ -11,9 +11,8 @@ export default class App extends Component {
       <div className="container">
         <Router>
           <div>
-            <Switch>
-              <Route exact path="/" component={Home} />
-            </Switch>
+            <Home />
+            <Switch></Switch>
           </div>
         </Router>
       </div>
