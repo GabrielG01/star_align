@@ -1,7 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import logo from "./logo.svg";
 
+console.log("fuck");
+console.log("fuck");
+console.log("fuck");
+
+console.log("fuck");
 function App() {
   return (
     <div className="App">
@@ -16,11 +21,15 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React :/
         </a>
       </header>
     </div>
   );
 }
 
+console.log("fuckckckkckc");
 export default App;
+console.log("fuckckckkckc");
+
+console.log("fuckckckkckc");
