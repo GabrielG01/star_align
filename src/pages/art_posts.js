@@ -1,7 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-const ArtPost = () => {
-  return <div className=""></div>;
-};
+class ArtPosts extends Component {
+  render() {
+    return (
+      <div>
+        <h2>About</h2>
+      </div>
+    );
+  }
+}
 
-export default ArtPost;
+export default ArtPosts;

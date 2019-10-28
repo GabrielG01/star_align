@@ -3,6 +3,7 @@
 .home_body {
   height: 100%;
   background-image: url("./images/wp2190559.jpg");
+
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -17,6 +18,12 @@
 }
 
 .home_enter {
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   width: 100px;
   height: 60px;
