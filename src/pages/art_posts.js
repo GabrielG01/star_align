@@ -1,7 +1,7 @@
 import React from "react";
 
-const LoginPage = () => {
+const ArtPost = () => {
   return <div className=""></div>;
 };
 
-export default LoginPage;
+export default ArtPost;
