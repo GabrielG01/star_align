@@ -37,6 +37,7 @@
 }
 
 .home_description p {
+  font-size: 2em;
   margin-bottom: 90px;
   font-family: "Quicksand", sans-serif;
 }
@@ -45,4 +46,19 @@
   font-size: 90px;
   font-weight: 100;
   font-family: "Modak", cursive;
+}
+
+.home_logo {
+  margin-top: 100px;
+}
+
+.home_logo img {
+  height: 250px;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  height: 50px;
 }
