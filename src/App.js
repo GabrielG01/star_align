@@ -2,11 +2,6 @@ import React from "react";
 import "./App.css";
 import logo from "./logo.svg";
 
-console.log("fuck");
-console.log("fuck");
-console.log("fuck");
-
-console.log("fuck");
 function App() {
   return (
     <div className="App">
@@ -28,8 +23,4 @@ function App() {
   );
 }
 
-console.log("fuckckckkckc");
 export default App;
-console.log("fuckckckkckc");
-
-console.log("fuckckckkckc");
