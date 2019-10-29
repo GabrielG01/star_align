@@ -56,6 +56,7 @@
 }
 
 .header {
+  font-family: "Quicksand", sans-serif;
   background-color: oldlace;
   width: 100vw;
   display: flex;
@@ -85,4 +86,8 @@
   background-color: oldlace;
   margin: 0;
   padding: 0;
+}
+
+.drake {
+  text-decoration: none;
 }

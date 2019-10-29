@@ -9,6 +9,12 @@ class CreatePost extends Component {
         <Header />
         <div className="art_posts_body">
           <h1>Create Post</h1>
+          <form>
+            <textarea></textarea>
+            <select></select>
+            <textarea></textarea>
+            <button>Submit</button>
+          </form>
         </div>
       </div>
     );

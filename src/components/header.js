@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { NavLink } from "react-router-dom";
 
 class Header extends Component {
@@ -6,17 +7,19 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header_art_posts">
-          <NavLink exact to="/art_posts">
+          <NavLink className="drake" exact to="/art_posts">
             Posts
           </NavLink>
         </div>
+
         <div className="header_create_post">
-          <NavLink exact to="/create_post">
+          <NavLink className="drake" exact to="/create_post">
             Create Post
           </NavLink>
         </div>
+
         <div className="header_home">
-          <NavLink exact to="/">
+          <NavLink className="header_home drake" exact to="/">
             Home
           </NavLink>
         </div>
