@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Home from "../pages/home";
-import ArtPosts from "../pages/art_posts";
 
 class Header extends Component {
   render() {
