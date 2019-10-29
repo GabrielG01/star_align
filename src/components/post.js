@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import art from "../images/23011364239_d07d66e290_c.jpg";
 
 class Post extends Component {
   render() {
     return (
       <div className="post">
         <div className="post_image">
-          <h1>Image goes here</h1>
+          <img src={art} alt="art"></img>
         </div>
         <div className="post_text_fields">
           <div className="post_title">
