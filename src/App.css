@@ -63,3 +63,10 @@
   height: 50px;
   border-bottom: 5px solid #e3cc9f;
 }
+
+.art_posts_body {
+  height: 100vh;
+  background-color: oldlace;
+  margin: 0;
+  padding: 0;
+}

@@ -15,6 +15,11 @@ class Header extends Component {
             Posts
           </NavLink>
         </div>
+        <div className="header_create_post">
+          <NavLink exact to="/create_post">
+            Create Post
+          </NavLink>
+        </div>
       </div>
     );
   }

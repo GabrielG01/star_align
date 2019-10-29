@@ -7,7 +7,9 @@ class ArtPosts extends Component {
     return (
       <div>
         <Header />
-        <h2>Art Posts</h2>
+        <div className="art_posts_body">
+          <h1>Art Posts</h1>
+        </div>
       </div>
     );
   }
