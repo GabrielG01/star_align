@@ -91,3 +91,13 @@
 .drake {
   text-decoration: none;
 }
+
+.post {
+  font-family: "Quicksand", sans-serif;
+  background-color: oldlace;
+  width: 100vw;
+  height: 100%;
+  border-bottom: 2px solid #e3cc9f;
+  margin: 0;
+  padding: 0;
+}

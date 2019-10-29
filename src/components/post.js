@@ -4,7 +4,13 @@ class Post extends Component {
   render() {
     return (
       <div className="post">
-        <h1>This is a supa epic post</h1>
+        <div className="post_image"></div>
+        <div className="post_title">
+          <h1>epic title</h1>
+        </div>
+        <div className="post_description">
+          <p>Supa supa awesome description for epic awesome art piece</p>
+        </div>
       </div>
     );
   }
