@@ -56,9 +56,10 @@
 }
 
 .header {
+  background-color: oldlace;
   width: 100vw;
   display: flex;
   align-items: center;
   height: 50px;
-  border-bottom: 2px solid black;
+  border-bottom: 5px solid #e3cc9f;
 }
