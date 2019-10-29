@@ -59,13 +59,29 @@
   background-color: oldlace;
   width: 100vw;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   height: 50px;
   border-bottom: 5px solid #e3cc9f;
+  margin: 0;
+  padding: 0;
+}
+
+.header_home {
+  padding: 30px;
+}
+
+.header_art_posts {
+  padding: 30px;
+}
+
+.header_create_post {
+  padding: 30px;
 }
 
 .art_posts_body {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: oldlace;
   margin: 0;
   padding: 0;
