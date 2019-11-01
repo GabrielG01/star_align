@@ -32,7 +32,14 @@ export default class CreatePost extends Component {
         post_type: this.state.post_type
       })
       .then(response => {
-        window.location.reload();
+        this.setState({
+          title: "",
+          description: "",
+          post_type: ""
+        });
+      })
+      .then(() => {
+        alert("Art successfully posted!");
       });
   }
 
