@@ -50,6 +50,7 @@ export default class CreatePost extends Component {
         <form onSubmit={this.handleSubmit} className="create_post_wrapper">
           <div className="create_post_fields">
             <input
+              className="create_post_title"
               type="text"
               onChange={this.handleChange}
               name="title"
@@ -57,6 +58,7 @@ export default class CreatePost extends Component {
               value={this.state.title}
             />
             <input
+              className="create_post_description"
               type="text"
               onChange={this.handleChange}
               name="description"
@@ -65,6 +67,7 @@ export default class CreatePost extends Component {
             />
 
             <input
+              className="create_post_type"
               type="text"
               onChange={this.handleChange}
               name="post_type"

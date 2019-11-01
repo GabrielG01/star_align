@@ -7,19 +7,27 @@ class Post extends Component {
     super();
 
     this.state = {
-      posts: []
+      posts: [],
+      isLoading: true
     };
 
     this.renderPosts = this.renderPosts.bind(this);
   }
 
   componentDidMount() {
-    axios.get("https://star-align-db.herokuapp.com/posts").then(response => {
-      this.setState({
-        posts: response.data
+    axios
+      .get("https://star-align-db.herokuapp.com/posts")
+      .then(response => {
+        this.setState({
+          posts: response.data
+        });
+        console.log(this.state.posts);
+      })
+      .then(() => {
+        this.setState({
+          isLoading: false
+        });
       });
-      console.log(this.state.posts);
-    });
   }
 
   renderPosts() {
@@ -35,6 +43,12 @@ class Post extends Component {
               <p>{post.description}</p>
             </div>
           </div>
+
+          {this.state.isLoading ? (
+            <div className="content-loader">
+              <h1>Gathering posts...</h1>
+            </div>
+          ) : null}
         </div>
       );
     });
