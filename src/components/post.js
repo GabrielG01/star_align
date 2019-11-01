@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import axios from "axios";
+
 // import art from "../images/23011364239_d07d66e290_c.jpg";
 
 class Post extends Component {
@@ -8,6 +10,7 @@ class Post extends Component {
 
     this.state = {
       posts: [],
+
       isLoading: true
     };
 
@@ -16,19 +19,35 @@ class Post extends Component {
 
   componentDidMount() {
     axios
+
       .get("https://star-align-db.herokuapp.com/posts")
+
       .then(response => {
         this.setState({
           posts: response.data
         });
+
         console.log(this.state.posts);
       })
+
       .then(() => {
         this.setState({
           isLoading: false
         });
       });
   }
+
+  deletePost = id => {
+    fetch("https://star-align-db.herokuapp.com/post/${id}", {
+      method: "DELETE"
+    })
+      .then(
+        this.setState({
+          posts: this.state.posts.filter(post => post.id !== id)
+        })
+      )
+      .then(console.log("Delete clicked"));
+  };
 
   renderPosts() {
     return this.state.posts.map(post => {
@@ -37,8 +56,10 @@ class Post extends Component {
           <div className="post_image">
             <img src="https://source.unsplash.com/random" alt="art" />
           </div>
+
           <div className="post_text_fields">
             <div className="post_title">{post.title}</div>
+
             <div className="post_description">
               <p>{post.description}</p>
             </div>
@@ -49,6 +70,10 @@ class Post extends Component {
               <h1>Gathering posts...</h1>
             </div>
           ) : null}
+
+          <button onClick={this.deletePost} className="btn">
+            Delete
+          </button>
         </div>
       );
     });
