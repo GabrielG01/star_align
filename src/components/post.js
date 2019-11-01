@@ -38,7 +38,7 @@ class Post extends Component {
   }
 
   deletePost = id => {
-    fetch("https://star-align-db.herokuapp.com/post/${id}", {
+    fetch(`https://star-align-db.herokuapp.com/post/${id}`, {
       method: "DELETE"
     })
       .then(
@@ -65,15 +65,15 @@ class Post extends Component {
             </div>
           </div>
 
+          <button onClick={this.deletePost} className="btn">
+            Delete
+          </button>
+
           {this.state.isLoading ? (
             <div className="content-loader">
               <h1>Gathering posts...</h1>
             </div>
           ) : null}
-
-          <button onClick={this.deletePost} className="btn">
-            Delete
-          </button>
         </div>
       );
     });
