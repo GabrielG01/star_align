@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import art from "../images/23011364239_d07d66e290_c.jpg";
+// import art from "../images/23011364239_d07d66e290_c.jpg";
 
 class Post extends Component {
   constructor() {
@@ -27,7 +27,7 @@ class Post extends Component {
       return (
         <div className="post">
           <div className="post_image">
-            <img src={art} alt="art" />
+            <img src="https://source.unsplash.com/random" alt="art" />
           </div>
           <div className="post_text_fields">
             <div className="post_title">{post.title}</div>

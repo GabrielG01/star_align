@@ -6,6 +6,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+        <div className="header_play_button">Play Button</div>
         <div className="header_art_posts">
           <NavLink className="drake" exact to="/art_posts">
             Posts
