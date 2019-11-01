@@ -1,24 +1,74 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import Header from "../components/header";
 
-class CreatePost extends Component {
+export default class CreatePost extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: "",
+      description: "",
+      post_type: ""
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    axios
+      .post("https://star-align-db.herokuapp.com/post", {
+        title: this.state.title,
+        description: this.state.description,
+        post_type: this.state.post_type
+      })
+      .then(response => {
+        window.location.reload();
+      });
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <div className="art_posts_body">
-          <h1>Create Post</h1>
-          <form>
-            <textarea></textarea>
-            <select></select>
-            <textarea></textarea>
-            <button>Submit</button>
-          </form>
-        </div>
+        <form onSubmit={this.handleSubmit} className="create_post_wrapper">
+          <div className="create_post_fields">
+            <input
+              type="text"
+              onChange={this.handleChange}
+              name="title"
+              placeholder="Post Title"
+              value={this.state.title}
+            />
+            <input
+              type="text"
+              onChange={this.handleChange}
+              name="description"
+              placeholder="Post Description"
+              value={this.state.description}
+            />
+
+            <input
+              type="text"
+              onChange={this.handleChange}
+              name="post_type"
+              placeholder="Type of post"
+              value={this.state.post_type}
+            />
+          </div>
+
+          <button className="btn">Save</button>
+        </form>
       </div>
     );
   }
 }
-
-export default CreatePost;

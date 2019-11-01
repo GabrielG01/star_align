@@ -136,3 +136,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.create_post_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: oldlace;
+
+  height: 100vh;
+}
+
+.create_post_fields {
+  border: 5px solid #e3cc9f;
+  padding: 50px;
+  height: 500px;
+  width: 1000px;
+  background-color: white;
+}
