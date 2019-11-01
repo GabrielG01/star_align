@@ -119,4 +119,5 @@
 .post_text_fields {
   display: flex;
   justify-content: center;
+  width: 100%;
 }

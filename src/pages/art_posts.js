@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Header from "../components/header";
 import Post from "../components/post";
 
@@ -9,9 +8,6 @@ class ArtPosts extends Component {
       <div>
         <Header />
         <div className="art_posts_body">
-          <Post />
-          <Post />
-          <Post />
           <Post />
         </div>
       </div>
