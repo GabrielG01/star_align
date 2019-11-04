@@ -64,13 +64,14 @@ class Header extends Component {
           </NavLink>
         </div>
 
-        <PlayButton />
-
         <div className="header_art_posts">
           <NavLink className="drake" exact to="/art_posts">
             Posts
           </NavLink>
         </div>
+
+        <PlayButton />
+
         {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
           <div className="header_create_post">
             <NavLink className="drake" exact to="/create_post">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import DeletePost from "./delete_post";
 import Cookie from "js-cookie";
+import Loader from "react-loader-spinner";
 
 class Post extends Component {
   constructor() {
@@ -9,7 +10,6 @@ class Post extends Component {
 
     this.state = {
       posts: [],
-
       isLoading: true
     };
 
@@ -17,23 +17,12 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    axios
-
-      .get("https://star-align-db.herokuapp.com/posts")
-
-      .then(response => {
-        this.setState({
-          posts: response.data
-        });
-
-        console.log(this.state.posts);
-      })
-
-      .then(() => {
-        this.setState({
-          isLoading: false
-        });
+    axios.get("https://star-align-db.herokuapp.com/posts").then(response => {
+      this.setState({
+        posts: response.data,
+        isLoading: false
       });
+    });
   }
 
   renderPosts() {
