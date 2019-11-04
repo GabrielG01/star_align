@@ -96,6 +96,10 @@
   height: 100%;
 }
 
+.header_play_button:hover {
+  cursor: pointer;
+}
+
 .header_username {
   margin-right: 25px;
 }

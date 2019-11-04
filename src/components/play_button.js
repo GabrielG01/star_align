@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactHowler from "react-howler";
 import song from "../audio/DamFunkType.mp3";
 
-import play from "../images/play button.png";
+import play from "../images/playbtn.png";
 
 export default class PlayButton extends Component {
   constructor() {
