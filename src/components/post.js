@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import axios from "axios";
 
+import DeletePost from "./delete_post";
+
 // import art from "../images/23011364239_d07d66e290_c.jpg";
 
 class Post extends Component {
@@ -37,22 +39,15 @@ class Post extends Component {
       });
   }
 
-  deletePost = id => {
-    fetch(`https://star-align-db.herokuapp.com/post/${id}`, {
-      method: "DELETE"
-    })
-      .then(
-        this.setState({
-          posts: this.state.posts.filter(post => post.id !== id)
-        })
-      )
-      .then(console.log("Delete clicked"));
-  };
-
   renderPosts() {
     return this.state.posts.map(post => {
       return (
         <div className="post">
+          {this.state.isLoading ? (
+            <div className="content-loader">
+              <h1>Gathering posts...</h1>
+            </div>
+          ) : null}
           <div className="post_image">
             <img src="https://source.unsplash.com/random" alt="art" />
           </div>
@@ -65,15 +60,11 @@ class Post extends Component {
             </div>
           </div>
 
-          <button onClick={this.deletePost} className="btn">
-            Delete
-          </button>
+          <div className="post_type">
+            <p>{post.post_type}</p>
+          </div>
 
-          {this.state.isLoading ? (
-            <div className="content-loader">
-              <h1>Gathering posts...</h1>
-            </div>
-          ) : null}
+          <DeletePost id={post.id} />
         </div>
       );
     });

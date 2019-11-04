@@ -39,7 +39,7 @@ export default class CreatePost extends Component {
         });
       })
       .then(() => {
-        alert("Art successfully posted!");
+        alert("Art successfully uploaded!");
       });
   }
 
@@ -49,14 +49,24 @@ export default class CreatePost extends Component {
         <Header />
         <form onSubmit={this.handleSubmit} className="create_post_wrapper">
           <div className="create_post_fields">
-            <input
-              className="create_post_title"
-              type="text"
-              onChange={this.handleChange}
-              name="title"
-              placeholder="Post Title"
-              value={this.state.title}
-            />
+            <div className="top-row">
+              <input
+                className="create_post_title"
+                type="text"
+                onChange={this.handleChange}
+                name="title"
+                placeholder="Post Title"
+                value={this.state.title}
+              />
+              <input
+                className="create_post_type"
+                type="text"
+                onChange={this.handleChange}
+                name="post_type"
+                placeholder="Type of post"
+                value={this.state.post_type}
+              />
+            </div>
             <input
               className="create_post_description"
               type="text"
@@ -65,18 +75,9 @@ export default class CreatePost extends Component {
               placeholder="Post Description"
               value={this.state.description}
             />
-
-            <input
-              className="create_post_type"
-              type="text"
-              onChange={this.handleChange}
-              name="post_type"
-              placeholder="Type of post"
-              value={this.state.post_type}
-            />
           </div>
 
-          <button className="btn">Save</button>
+          <button className="btn">Upload</button>
         </form>
       </div>
     );
