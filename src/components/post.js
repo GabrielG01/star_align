@@ -3,8 +3,6 @@ import axios from "axios";
 import DeletePost from "./delete_post";
 import Cookie from "js-cookie";
 
-// import art from "../images/23011364239_d07d66e290_c.jpg";
-
 class Post extends Component {
   constructor() {
     super();

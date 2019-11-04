@@ -113,6 +113,10 @@
   padding: 2px;
 }
 
+.header_logo img {
+  height: 100px;
+}
+
 .log-button {
   height: 54.8px;
   width: 60px;

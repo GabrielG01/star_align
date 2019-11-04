@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Cookie from "js-cookie";
 import PlayButton from "./play_button";
-
+import logo from "../images/8fce4766-f93f-4fd5-a765-eb1112d855ac_200x200.png";
 import { NavLink } from "react-router-dom";
 
 class Header extends Component {
@@ -55,6 +55,9 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
+        <div className="header_logo">
+          <img src={logo} />
+        </div>
         <div className="header_home">
           <NavLink className="header_home drake" exact to="/">
             Home
