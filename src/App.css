@@ -108,6 +108,18 @@
   display: flex;
 }
 
+.header_input {
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.log-button {
+  height: 54.8px;
+  width: 60px;
+  color: white;
+  background-color: brown;
+}
+
 .art_posts_body {
   height: 100%;
   width: 100%;
@@ -118,6 +130,10 @@
 
 .drake {
   text-decoration: none;
+}
+
+.drake:hover {
+  color: brown;
 }
 
 /* POST STYLES */
@@ -168,6 +184,7 @@
 }
 
 .post_type {
+  height: 100px;
   margin-right: 20px;
 }
 

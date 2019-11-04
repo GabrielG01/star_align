@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactHowler from "react-howler";
-import song from "../audio/DamFunkType.mp3";
+import song from "../audio/JazzNumber.wav";
 
 import play from "../images/playbtn.png";
 

@@ -79,7 +79,7 @@ class Header extends Component {
           {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
             <div className="header_login">
               <p className="header_username">
-                Welcome, {Cookie.get("USERNAME")}
+                Welcome, {Cookie.get("USERNAME")}!
               </p>
 
               <button
@@ -94,6 +94,7 @@ class Header extends Component {
           ) : (
             <div>
               <input
+                className="header_input"
                 onChange={event => {
                   this.handleUsername(event);
                 }}
@@ -101,6 +102,7 @@ class Header extends Component {
                 placeholder="Username"
               ></input>
               <input
+                className="header_input"
                 onChange={event => {
                   this.handlePassword(event);
                 }}
