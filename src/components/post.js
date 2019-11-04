@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
 import axios from "axios";
-
 import DeletePost from "./delete_post";
+import Cookie from "js-cookie";
 
 // import art from "../images/23011364239_d07d66e290_c.jpg";
 
@@ -63,8 +62,9 @@ class Post extends Component {
           <div className="post_type">
             <p>{post.post_type}</p>
           </div>
-
-          <DeletePost id={post.id} />
+          {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
+            <DeletePost id={post.id} />
+          ) : null}
         </div>
       );
     });

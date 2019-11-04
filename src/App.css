@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Modak|Quicksand&display=swap");
 
+/* HOME STYLES */
+
 .home_body {
   height: 100%;
   background-image: url("./images/wp2190559.jpg");
@@ -55,29 +57,51 @@
   height: 250px;
 }
 
+/* HEADER STYLES */
+
 .header {
   font-family: "Quicksand", sans-serif;
   background-color: oldlace;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   height: 50px;
   border-bottom: 5px solid #e3cc9f;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .header_home {
-  padding: 30px;
+  display: flex;
 }
 
 .header_art_posts {
+  display: flex;
+
   padding: 30px;
 }
 
 .header_create_post {
+  display: flex;
+
   padding: 30px;
+}
+
+.header_play_button img {
+  display: flex;
+
+  width: 40px;
+  height: 100%;
+}
+
+.header_username {
+  margin-right: 25px;
+}
+
+.header_login {
+  display: flex;
 }
 
 .art_posts_body {
@@ -91,6 +115,8 @@
 .drake {
   text-decoration: none;
 }
+
+/* POST STYLES */
 
 .post {
   font-family: "Quicksand", sans-serif;
@@ -140,6 +166,8 @@
 .post_type {
   margin-right: 20px;
 }
+
+/* CREATE POST STYLES */
 
 .create_post_wrapper {
   display: flex;
