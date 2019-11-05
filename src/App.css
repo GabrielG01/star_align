@@ -225,6 +225,8 @@
 }
 
 .create_post_description {
+  display: flex;
+  justify-content: flex-start;
   width: 1000px;
   height: 400px;
   margin: 20px;

@@ -58,14 +58,19 @@ export default class CreatePost extends Component {
                 placeholder="Post Title"
                 value={this.state.title}
               />
-              <input
+              <select
                 className="create_post_type"
                 type="text"
                 onChange={this.handleChange}
                 name="post_type"
                 placeholder="Type of post"
                 value={this.state.post_type}
-              />
+              >
+                <option value="Painting">Painting</option>
+                <option value="Drawing">Drawing</option>
+                <option value="Film">Film</option>
+                <option value="Music">Music</option>
+              </select>
             </div>
             <input
               className="create_post_description"
