@@ -13,8 +13,7 @@ export default class DeletePost extends Component {
       .then(response => {
         console.log("response", response);
       })
-      .then(alert("Post deleted"))
-      .then(window.location.reload());
+      .then(alert("Post deleted"));
   };
 
   render() {
