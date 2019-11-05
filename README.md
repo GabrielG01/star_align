@@ -1,3 +1,3 @@
-##Star Align
+Star Align
 
 The online web gallery for artists.
