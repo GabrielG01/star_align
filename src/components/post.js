@@ -92,13 +92,14 @@ class Post extends Component {
               <p>{post.description}</p>
             </div>
           </div>
-
-          <div className="post_type">
-            <h2>{post.post_type}</h2>
+          <div className="post_right_row">
+            <div className="post_type">
+              <h2>{post.post_type}</h2>
+            </div>
+            {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
+              <DeletePost id={post.id} />
+            ) : null}
           </div>
-          {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
-            <DeletePost id={post.id} />
-          ) : null}
         </div>
       );
     });
