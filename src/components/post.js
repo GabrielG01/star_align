@@ -2,7 +2,18 @@ import React, { Component } from "react";
 import axios from "axios";
 import DeletePost from "./delete_post";
 import Cookie from "js-cookie";
-import Loader from "react-loader-spinner";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)"
+  }
+};
 
 class Post extends Component {
   constructor() {
@@ -10,10 +21,20 @@ class Post extends Component {
 
     this.state = {
       posts: [],
-      isLoading: true
+      isLoading: true,
+      modalIsOpen: false
     };
-
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.renderPosts = this.renderPosts.bind(this);
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   componentDidMount() {
@@ -35,13 +56,35 @@ class Post extends Component {
     return this.state.posts.map(post => {
       return (
         <div className="post">
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <h2>{post.title}</h2>
+            <button className="btn" onClick={this.closeModal}>
+              X
+            </button>
+            <img
+              className="modal_image"
+              onClick={this.openModal}
+              src="https://source.unsplash.com/random"
+              alt="art"
+            />
+          </Modal>
           {this.state.isLoading ? (
             <div className="content-loader">
               <h1>Gathering posts...</h1>
             </div>
           ) : null}
           <div className="post_image">
-            <img src="https://source.unsplash.com/random" alt="art" />
+            <img
+              onClick={this.openModal}
+              src="https://source.unsplash.com/random"
+              alt="art"
+            />
           </div>
 
           <div className="post_text_fields">

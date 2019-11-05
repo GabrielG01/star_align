@@ -170,6 +170,13 @@
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.post_image:hover {
+  width: 348px;
+  border: 2px solid white;
 }
 
 .post_text_fields {
