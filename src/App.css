@@ -58,6 +58,10 @@
   height: 250px;
 }
 
+.home_clock {
+  margin-top: 100px;
+}
+
 /* HEADER STYLES */
 
 .header {
@@ -115,7 +119,7 @@
 }
 
 .header_logo img {
-  height: 100px;
+  height: 50px;
 }
 
 .log-button {
@@ -222,6 +226,7 @@
 
 .create_post_title {
   width: 500px;
+  border-radius: 2px;
 }
 
 .create_post_description {
@@ -230,6 +235,7 @@
   width: 1000px;
   height: 400px;
   margin: 20px;
+  border-radius: 2px;
 }
 
 .btn {
@@ -238,4 +244,10 @@
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.08);
   background-color: white;
   border: solid 2px brown;
+  border-radius: 2px;
+}
+
+.clock_styles h1 {
+  font-weight: 100;
+  font-size: 1.2em;
 }

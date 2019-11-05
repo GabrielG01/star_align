@@ -17,12 +17,18 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://star-align-db.herokuapp.com/posts").then(response => {
-      this.setState({
-        posts: response.data,
-        isLoading: false
-      });
-    });
+    axios
+      .get("https://star-align-db.herokuapp.com/posts")
+      .then(response => {
+        this.setState({
+          posts: response.data
+        });
+      })
+      .then(
+        this.setState({
+          isLoading: false
+        })
+      );
   }
 
   renderPosts() {

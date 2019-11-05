@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Clock from "../components/clock";
 import logo from "../images/8fce4766-f93f-4fd5-a765-eb1112d855ac_200x200.png";
 
 export default class Home extends Component {
@@ -19,6 +20,9 @@ export default class Home extends Component {
           <NavLink exact to="/art_posts" className="home_enter">
             Enter
           </NavLink>
+          <div className="home_clock">
+            <Clock />
+          </div>
         </div>
       </body>
     );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Cookie from "js-cookie";
 import PlayButton from "./play_button";
-import logo from "../images/8fce4766-f93f-4fd5-a765-eb1112d855ac_200x200.png";
+import logo from "../images/Screenshot_2019-11-05 React App.png";
 import { NavLink } from "react-router-dom";
 
 class Header extends Component {
@@ -27,6 +27,7 @@ class Header extends Component {
     this.setState({
       loggedIn: true
     });
+    alert(`Welcome, ${Cookie.get("USERNAME")}!\nYou can now create posts.`);
   }
 
   handleUsername(event) {
@@ -64,13 +65,13 @@ class Header extends Component {
           </NavLink>
         </div>
 
+        <PlayButton />
+
         <div className="header_art_posts">
           <NavLink className="drake" exact to="/art_posts">
             Posts
           </NavLink>
         </div>
-
-        <PlayButton />
 
         {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
           <div className="header_create_post">
@@ -82,9 +83,7 @@ class Header extends Component {
         <div className="log-in">
           {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
             <div className="header_login">
-              <p className="header_username">
-                Welcome, {Cookie.get("USERNAME")}!
-              </p>
+              <p className="header_username">{Cookie.get("USERNAME")}</p>
 
               <button
                 className="log-button"
