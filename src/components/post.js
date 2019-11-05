@@ -45,7 +45,9 @@ class Post extends Component {
           </div>
 
           <div className="post_text_fields">
-            <div className="post_title">{post.title}</div>
+            <div className="post_title">
+              <h1>{post.title}</h1>
+            </div>
 
             <div className="post_description">
               <p>{post.description}</p>
@@ -53,7 +55,7 @@ class Post extends Component {
           </div>
 
           <div className="post_type">
-            <p>{post.post_type}</p>
+            <h2>{post.post_type}</h2>
           </div>
           {Cookie.get("USERNAME") && Cookie.get("PASSWORD") ? (
             <DeletePost id={post.id} />
