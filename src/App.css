@@ -159,7 +159,7 @@
   flex-direction: row;
 }
 
-.post_image {
+.post_image img {
   margin: 25px;
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
   text-align: center;
@@ -167,14 +167,14 @@
   justify-content: center;
   align-items: center;
   width: 350px;
-  height: 100%;
+  max-height: 350px;
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
   transition: 0.1s ease-in-out;
 }
 
-.post_image:hover {
+.post_image img:hover {
   width: 348px;
   border: 2px solid white;
 }
@@ -261,4 +261,9 @@
 .clock_styles h1 {
   font-weight: 100;
   font-size: 1.2em;
+}
+
+.modal_image {
+  width: 500px;
+  height: 100%;
 }

@@ -61,12 +61,8 @@ class Post extends Component {
             onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
             style={customStyles}
-            contentLabel="Example Modal"
+            contentLabel="Image Modal"
           >
-            <h2>{post.title}</h2>
-            <button className="btn" onClick={this.closeModal}>
-              X
-            </button>
             <img
               className="modal_image"
               onClick={this.openModal}
