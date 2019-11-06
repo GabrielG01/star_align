@@ -23,7 +23,7 @@ export default class PlayButton extends Component {
     return (
       <div className="header_play_button">
         <img onClick={this.handlePlay} src={play} />
-        <ReactHowler src={song} playing={this.state.isPlaying} volume={0.1} />
+        <ReactHowler src={song} playing={this.state.isPlaying} volume={0.5} />
       </div>
     );
   }
