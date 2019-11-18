@@ -21,7 +21,7 @@ export default class PlayButton extends Component {
 
   render() {
     return (
-      <div className="header_play_button">
+      <div className="header_play_button haha_lol">
         <img onClick={this.handlePlay} src={play} />
         <ReactHowler src={song} playing={this.state.isPlaying} volume={0.5} />
       </div>
